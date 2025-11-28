@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = 'http://localhost:5050/api/auth';
+const API = 'https://job-portal-1-d4oh.onrender.com/api/auth';
 
 // LOGIN
 export const loginApi = (data) => {
