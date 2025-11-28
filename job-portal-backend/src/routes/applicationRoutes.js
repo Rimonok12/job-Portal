@@ -91,5 +91,21 @@ router.get(
     }
   }
 );
+router.get(
+  '/:jobId/applicants',
+  authMiddleware,
+  authorizeRoles('employer'),
+  async (req, res) => {
+    try {
+      const applications = await Application.find({
+        job: req.params.jobId,
+      }).populate('applicant', 'name email skills resumeUrl');
+
+      res.json(applications);
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
+  }
+);
 
 export default router;

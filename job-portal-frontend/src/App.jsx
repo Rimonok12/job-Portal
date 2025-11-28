@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AdminDashboard from './pages/AdminDashboard';
 import JobSeekerDashboard from './pages/JobSeekerDashboard';
+import EmployerDashboard from './pages/EmployerDashboard';
 
 const App = () => {
   return (
@@ -33,7 +34,8 @@ const App = () => {
             path="/dashboard/employer"
             element={
               <ProtectedRoute roles={['employer']}>
-                <div>Employer Dashboard</div>
+                {/* <div>Employer Dashboard</div> */}
+                <EmployerDashboard />
               </ProtectedRoute>
             }
           />
