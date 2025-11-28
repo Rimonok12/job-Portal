@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5050',
+  baseURL: 'https://job-portal-1-d4oh.onrender.com',
 });
 
 // Attach token to every request
