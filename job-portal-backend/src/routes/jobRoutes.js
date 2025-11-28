@@ -96,5 +96,9 @@ router.get('/all', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+// router.get('/', async (req, res) => {
+//   const jobs = await Job.find();
+//   res.json(jobs);
+// });
 
 export default router;
