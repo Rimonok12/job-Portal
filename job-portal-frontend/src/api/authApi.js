@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = 'https://job-portal-1-d4oh.onrender.com/api/auth';
+const API = `${import.meta.env.VITE_API_BASE_URL}/api/auth`;
 
 // LOGIN
 export const loginApi = (data) => {

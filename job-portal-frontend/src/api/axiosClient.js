@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-  baseURL: 'https://job-portal-1-d4oh.onrender.com/api', // backend base
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`, // backend base
 });
 
 // Add token to every request if exists

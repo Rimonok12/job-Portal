@@ -19,7 +19,7 @@ const app = express();
 // app.use(cors());
 app.use(
   cors({
-    origin: 'https://job-portal-five-nu-16.vercel.app',
+    origin: process.env.CORS,
     methods: 'GET,POST,PUT,DELETE',
     credentials: true,
   })
